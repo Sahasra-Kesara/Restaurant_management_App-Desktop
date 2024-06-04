@@ -12,3 +12,4 @@ D:\Road to 2024\dotNet\cafe_management\cafe_management\obj\Debug\cafe_management
 D:\Road to 2024\dotNet\cafe_management\cafe_management\obj\Debug\cafe_management.UserOrder.resources
 D:\Road to 2024\dotNet\cafe_management\cafe_management\obj\Debug\cafe_management.ItemsForm.resources
 D:\Road to 2024\dotNet\cafe_management\cafe_management\obj\Debug\cafe_management.UsersForm.resources
+D:\Road to 2024\dotNet\cafe_management\cafe_management\obj\Debug\cafe_management.ViewOrders.resources

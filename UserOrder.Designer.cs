@@ -31,22 +31,26 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.QtyTb = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.OrdersGv = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.SellerName = new System.Windows.Forms.TextBox();
             this.OrderNum = new System.Windows.Forms.TextBox();
             this.ItemsGV = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.categorycb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.Datelbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.OrderAmt = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersGv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,22 +81,40 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Snow;
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.OrderAmt);
+            this.panel1.Controls.Add(this.Datelbl);
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.QtyTb);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.OrdersGv);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.SellerName);
             this.panel1.Controls.Add(this.OrderNum);
             this.panel1.Controls.Add(this.ItemsGV);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.categorycb);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(216, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(789, 639);
             this.panel1.TabIndex = 12;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Coral;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(176, 98);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Refresh";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label5
             // 
@@ -107,6 +129,7 @@
             // 
             this.QtyTb.Location = new System.Drawing.Point(433, 297);
             this.QtyTb.Name = "QtyTb";
+            this.QtyTb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.QtyTb.Size = new System.Drawing.Size(157, 22);
             this.QtyTb.TabIndex = 13;
             this.QtyTb.Text = "Quantity";
@@ -117,12 +140,13 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(455, 603);
+            this.button2.Location = new System.Drawing.Point(257, 603);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 23);
             this.button2.TabIndex = 12;
             this.button2.Text = "Place the Order";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -133,17 +157,17 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Your Order";
             // 
-            // dataGridView1
+            // OrdersGv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(257, 383);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(507, 203);
-            this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.OrdersGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrdersGv.Location = new System.Drawing.Point(257, 383);
+            this.OrdersGv.Name = "OrdersGv";
+            this.OrdersGv.RowHeadersVisible = false;
+            this.OrdersGv.RowHeadersWidth = 51;
+            this.OrdersGv.RowTemplate.Height = 24;
+            this.OrdersGv.Size = new System.Drawing.Size(507, 203);
+            this.OrdersGv.TabIndex = 10;
+            this.OrdersGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -157,27 +181,20 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Add to Cart";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(685, 606);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Order Amount";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SellerName
             // 
-            this.SellerName.Location = new System.Drawing.Point(48, 192);
+            this.SellerName.Enabled = false;
+            this.SellerName.Location = new System.Drawing.Point(13, 192);
             this.SellerName.Name = "SellerName";
             this.SellerName.Size = new System.Drawing.Size(157, 22);
             this.SellerName.TabIndex = 7;
-            this.SellerName.Text = "Seller Name";
+            this.SellerName.Text = "Seller";
             // 
             // OrderNum
             // 
-            this.OrderNum.Location = new System.Drawing.Point(48, 150);
+            this.OrderNum.Location = new System.Drawing.Point(13, 150);
             this.OrderNum.Name = "OrderNum";
             this.OrderNum.Size = new System.Drawing.Size(157, 22);
             this.OrderNum.TabIndex = 6;
@@ -196,17 +213,18 @@
             this.ItemsGV.TabIndex = 4;
             this.ItemsGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsGV_CellContentClick);
             // 
-            // comboBox1
+            // categorycb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.categorycb.FormattingEnabled = true;
+            this.categorycb.Items.AddRange(new object[] {
             "Food",
             "Beverage"});
-            this.comboBox1.Location = new System.Drawing.Point(48, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 24);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "Category";
+            this.categorycb.Location = new System.Drawing.Point(13, 97);
+            this.categorycb.Name = "categorycb";
+            this.categorycb.Size = new System.Drawing.Size(157, 24);
+            this.categorycb.TabIndex = 3;
+            this.categorycb.Text = "Category";
+            this.categorycb.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
             // label1
             // 
@@ -245,6 +263,47 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // Datelbl
+            // 
+            this.Datelbl.AutoSize = true;
+            this.Datelbl.Location = new System.Drawing.Point(640, 15);
+            this.Datelbl.Name = "Datelbl";
+            this.Datelbl.Size = new System.Drawing.Size(36, 16);
+            this.Datelbl.TabIndex = 16;
+            this.Datelbl.Text = "Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(431, 606);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(24, 16);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Rs";
+            // 
+            // OrderAmt
+            // 
+            this.OrderAmt.AutoSize = true;
+            this.OrderAmt.Location = new System.Drawing.Point(461, 606);
+            this.OrderAmt.Name = "OrderAmt";
+            this.OrderAmt.Size = new System.Drawing.Size(89, 16);
+            this.OrderAmt.TabIndex = 17;
+            this.OrderAmt.Text = "Order Amount";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Coral;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(668, 603);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(96, 23);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "View Orders";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // UserOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -263,7 +322,7 @@
             this.Load += new System.EventHandler(this.UserOrder_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersGv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -278,16 +337,20 @@
         private System.Windows.Forms.TextBox QtyTb;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView OrdersGv;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SellerName;
         private System.Windows.Forms.TextBox OrderNum;
         private System.Windows.Forms.DataGridView ItemsGV;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox categorycb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label Datelbl;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label OrderAmt;
+        private System.Windows.Forms.Button button6;
     }
 }

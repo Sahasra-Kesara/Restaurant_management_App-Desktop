@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace cafe_management
 {
@@ -16,6 +17,8 @@ namespace cafe_management
         {
             InitializeComponent();
         }
+
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\acer\Documents\Cafedb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -29,12 +32,47 @@ namespace cafe_management
             guest.Show();
         }
 
+        public static string user;
+
         private void button1_Click(object sender, EventArgs e)
         {
-            UserOrder uorder = new UserOrder();
+            /* UserOrder uorder = new UserOrder();
             uorder.Show();
-            this.Show();
             this.Hide();
+            */
+            user = UnameTb.Text;
+            if(UnameTb.Text == "" || PasswordTb.Text == "")
+            {
+                MessageBox.Show("Enter A Username or Password");
+            }
+            else
+            {
+                Con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select count(*) from UsersTbl where Uname='"+UnameTb.Text+"' and Upassword='"+PasswordTb.Text+"'", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    UserOrder uorder = new UserOrder();
+                    uorder.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username or Password");
+                }
+                Con.Close();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
