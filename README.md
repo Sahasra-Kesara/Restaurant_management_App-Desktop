@@ -2,5 +2,4 @@
 ![Screenshot (274)](https://github.com/Sahasra-Kesara/Restaurant_management_App-Desktop/assets/121740972/00b4aab9-b669-41f3-9584-33e6a81f1e6c)
 ![Screenshot (275)](https://github.com/Sahasra-Kesara/Restaurant_management_App-Desktop/assets/121740972/ba60ad08-0e68-4a5f-82ab-66cb57339f03)
 ![Screenshot (276)](https://github.com/Sahasra-Kesara/Restaurant_management_App-Desktop/assets/121740972/7d605c14-6630-4fa7-9ff1-4b1651846125)
-![Screenshot (277)](https://github.com/Sahasra-Kesara/Restaurant_management_App-Desktop/assets/121740972/3e6a0a87-f9e5-4580-87c0-0600c6890b6b)
 ![Screenshot (278)](https://github.com/Sahasra-Kesara/Restaurant_management_App-Desktop/assets/121740972/44fb0b21-edcb-40ca-9626-afb8cbec6aa3)
